@@ -1,41 +1,76 @@
 <?php
-
 include 'conexion_be.php';
 
 /*Creacion de las variables con el metodo POST para 
-    recoger los valores del registro y subirlos a 
-    la base de datos.
+recoger los valores del registro y subirlos a 
+la base de datos.
 */
+$nombre = $_POST['nombre'];
+$apellidos = $_POST['apellidos'];
+$dni = $_POST['dni'];
+$nacimiento = $_POST['nacimiento'];
+$correo = $_POST['correo'];
+$contrasena = $_POST['contrasena'];
+$telefono = $_POST['telefono'];
+$direccion = $_POST['direccion'];
 
-    $nombre = $_POST['nombre'];
-    $apellidos = $_POST ['apellidos'];
-    $dni = $_POST['dni'];
-    $nacimiento = $_POST['nacimiento'];
-    $correo = $_POST['correo'];
-    $contrasena = $_POST['contrasena'];
-    $telefono = $_POST['telefono'];
-    $direccion = $_POST['direccion'];
+// Encriptacion
+$contrasena = hash('sha512', $contrasena);
 
-    $query = "INSERT INTO persona (DNI,nombre,apellido,correo,contrasena,telefono,direccion)
-    VALUES('$dni','$nombre','$apellidos','$correo','$contrasena','$telefono','$direccion')";
+
+
+// Verificacion si el DNI o el correo ya existen en la base de datos
+
+
+$consulta_dni = "SELECT * FROM persona WHERE DNI = '$dni'";
+$consulta_correo = "SELECT * FROM persona WHERE correo = '$correo'";
+
+$resultado_dni = mysqli_query($conexion, $consulta_dni);
+$resultado_correo = mysqli_query($conexion, $consulta_correo);
+
+if (mysqli_num_rows($resultado_dni) > 0) {
+  
+    echo '
+        <script>
+            alert("El DNI ya está registrado. Por favor, utiliza otro DNI.");
+            window.location.assign("https://clinicamontalban.com/registro.php"); 
+        </script>
+    ';
+} elseif (mysqli_num_rows($resultado_correo) > 0) {
+
+    echo '
+        <script>
+            alert("El correo ya está registrado. Por favor, utiliza otro correo.");
+            window.location.assign("https://clinicamontalban.com/registro.php"); 
+        </script>
+    ';
+} else {
+
+    $query = "INSERT INTO persona (DNI, nombre, apellido, correo, telefono, direccion)
+    VALUES ('$dni', '$nombre', '$apellidos', '$correo', '$telefono', '$direccion')";
+
+    $query2 = "INSERT INTO cliente (DNI, contrasena)
+    VALUES ('$dni', '$contrasena')";
 
     $enviar = mysqli_query($conexion, $query);
+    $enviar2 = mysqli_query($conexion, $query2);
 
-
-
-
-/*Condicional para redireccion a la pagina de login 
-en caso de que la query se ejecute de forma corecta
-
-*/
-
-    if($enviar){
-
-        echo'
+    if ($enviar && $enviar2) {
+        echo '
             <script>
-            
+                alert("El registro se ha completado de forma exitosa");
+                window.location.assign("https://clinicamontalban.com/login.php");
+            </script>
+        ';
+    } else {
+        echo '
+            <script>
+                alert("No se ha podido completar el registro");
+                window.location.assign("https://clinicamontalban.com/login.php");
             </script>
         ';
     }
+}
 
+mysqli_close($conexion);
 ?>

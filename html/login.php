@@ -32,7 +32,7 @@
                 <form class="form">
                     <label>
                         <i class='bx bx-envelope' ></i>
-                        <input type="text" placeholder="Correo Electronico" required>
+                        <input type="text" placeholder="NIF/DNI" maxlength="9" required>
                     </label>
                     <label class="passwordeye">
                         <i class='bx bx-lock' ></i>

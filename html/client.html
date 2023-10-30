@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinica Montalban</title>
+    <link rel="stylesheet" href="/assets/css/client-style.css">
+    <link href="https://db.onlinewebfonts.com/c/150037e11f159dca84bc4c04549094b6?family=Averta-Regular"
+        rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/images/logo-ico.png">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/hjsCalendar.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="assets/js/hjsCalendar.min.js"></script>
+    <script src="assets/js/cliente-script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="gradient"></div>
+        <div id="header">
+            <a href="index.html">
+                <div style="margin-top: 10px; margin-left: 15px;"><img src="/assets/img/LOGO-COLOR.png" width="80px"
+                        height="80px" alt="LOGOTIPO DE LA EMPRESA"></div>
+            </a>
+            <div class="titulo">Clinica</div>
+            <div class="titulo2">Montalban</div>
+        </div>
+        <hr class="header-separator">
+    </header>
+
+    <section class="title-top">
+        <h1>Selección de servicios</h1>
+    </section>
+
+    <!-- Button trigger modal -->
+    <div class="modals">
+        <!-- Modal -->
+        <div class="modal fade" id="visita" tabindex="-1" aria-labelledby="visita" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="visitas2">Visitas Programadas</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Contenido del modal -->
+                        <p>Hola que tal</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-prueba01" data-bs-dismiss="modal">Aceptar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carta de Visita (vertical) -->
+        <div class="card" style="width: 18rem; max-width: 100%;">
+            <img class="card-img-top" src="assets/img/clinica-cita.jpg" alt="Visitas Programadas" data-bs-toggle="modal"
+                data-bs-target="#visitas">
+            <div class="card-body">
+                <h5 class="card-title">Visitas Programadas</h5>
+                <p class="card-text">Comprueba tus citas y registro de visitas.</p>
+                <a href="#" class="btn btn-primary" onclick="$('#visita').modal('show');">Abrir Visitas</a>
+            </div>
+        </div>
+
+        <!-- Modal de Cita -->
+        <div class="modal fade" id="cita" tabindex="-1" aria-labelledby="cita" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="titulo-cita">Calendario de citas - Medico Cabecera</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="calendar-container">
+                        <div id="hjsCalendar"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carta de Cita (ahora vertical) -->
+        <div class="card" style="width: 18rem; max-width: 100%;">
+            <img src="assets/img/clinica-cita.jpg" class="card-img-top" alt="Cita - Medico de cabecera">
+            <div class="card-body">
+                <h5 class="card-title">Cita - Medico de cabecera</h5>
+                <p class="card-text">Tienes un calendario en tiempo real para poder pedir cita.</p>
+                <a href="#" class="btn btn-primary" onclick="$('#cita').modal('show');">Abrir Calendario</a>
+            </div>
+        </div>
+    </div>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/cliente-script.js"></script>
+</body>
+</html>

@@ -15,8 +15,6 @@ body {
     background-image: url(../img/login-clinica-test.jpg); 
     background-size: cover;
     backdrop-filter: blur(3px);
-
-
 }
 
 .container-form{
@@ -322,10 +320,10 @@ input[type=number] {
     }
 
     .container-form {
+        width: 100%;
         height: auto;
         flex-direction: column;
-        margin-right: 15px;
-        margin-left: 15px;
+
     }
 
     .information {

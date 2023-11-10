@@ -1,499 +1,237 @@
-@media screen and (min-width:1024px)
-{  
-    header{
-        position: fixed;
-        width: 100%;
-        z-index: 150;
-    }
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 150;
+}
 
-    div{
-        font-family: 'Averta-Regular';
-    }
-    
-    .titulo{
-        font-family: 'Averta-Regular';
-        position: absolute;
-        margin-top: -65px;
-        margin-left: 95px;
-        font-size: 35px;
-        color: #017eff;
-    }
-    
-    .titulo2{
-        font-family: 'Averta-Regular';
-        position: absolute;
-        margin-top: -65px;
-        margin-left: 215px;
-        font-size: 35px;
-        color: #00da67;
-    }
+div{
+    font-family: 'Averta-Regular';
+}
 
+.titulo{
+    font-family: 'Averta-Regular';
+    position: absolute;
+    margin-top: -65px;
+    margin-left: 95px;
+    font-size: 35px;
+    color: #017eff;
+}
 
-    .flexiniciosesion{
-        font-family: 'Averta-Regular';
-        display: flex;
-        flex-direction: row-reverse;
-    }
-    
-    .rectangulo{
-        display: flex;
-        margin-top: -60px;
-        margin-right: 25px;
-        /*
-        position: absolute;
-        margin-top: -65px;
-        margin-left: 86.3%;*/
-        height: 40px;
-        width: 215Px;
-        background-color: #2c95ff;
-    }
-    
-    .linksindecoracion{
-        text-decoration:none;
-    }
-    
-    .entraryregistrarse{
-        /*position: absolute;
-        margin-top: -54px;
-        margin-left: 87%;*/
-        margin-top: 9px;
-        margin-left: 15px;
-    }
-    
-    html{
-        font-family: 'Averta-Regular';
-        margin-left: -7px;
-        margin-top: -8.7px;
-    
-    }
-    
-    #header{
-        height: 83px;
-        background-color: white;
-        margin-top: -5px;
-    }
-    
-    #header2{
-        height: 45px;
-        background-color: #00da67;
-    }
-    
-    .container-fluid{
-        margin-top: -9.8px;
-        height: 45px;
-        background-color: #00da67;
-    }
-    
-    .navbar-collapse{
-        justify-content: center;
-    }
-    
-    .nav-item{
-        margin-left: 25px;
-        margin-right: 25px;
-    }
-    
-    .flex1{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        margin-left: 20%;
-        margin-right: 20%;
-    }
-    
-    #menu{
-        margin-top: 12px;
-    }
-    .gradient{
-        position: absolute;
-        width: 100.432222%;
-        height: 190%;
-        background: linear-gradient(165deg, white, white, rgb(190, 255, 255),#2cd5ff);
-        z-index: -1;
-    }
-
-    .texto1{
-        display: flex;
-        margin-right: 50px;
-        flex-direction: column;
-    }
-
-    .flex1{
-        display: flex;
-        margin-top: 50px;
-    }
-    
-    .texto2{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .img2{
-        margin-right: 50px;
-    }
-
-    .flex2{
-        margin-top: 100px;
-    }
-
-    footer{
-        position: absolute;
-        margin-top: 500px;
-        width: 100%;
-        background-color: white;
-    }
-
-    .flexfooter1{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .flexfooter2{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        width: 150px;
-    }
-
-    .flexfooter3{
-        display: flex;
-        flex-direction: column;
-        padding-right: 60px;
-        padding-left: 60px;
-    }
-
-    .flexfooter4{
-        display: flex;
-        flex-direction: column;
-        padding-right: 60px;
-        padding-left: 60px;
-    }
-
-    .columnas{
-        width: 1700px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        margin-top: 20px;
-        background-color: white;
-        margin-bottom: 20px;
-    }
-
-    .columna1{
-        display: flex;
-        flex-direction: column;
-        padding-right: 60px;
-        padding-left: 60px;
-    }
-
-    .titulo3{
-        font-family: 'Averta-Regular';
-        font-size: 20px;
-        color: #017eff;
-    }
-    
-    .titulo4{
-        font-family: 'Averta-Regular';
-        font-size: 20px;
-        color: #00da67;
-    }
-
+.titulo2{
+    font-family: 'Averta-Regular';
+    position: absolute;
+    margin-top: -65px;
+    margin-left: 215px;
+    font-size: 35px;
+    color: #00da67;
 }
 
 
-
-/*
-@media screen and (min-width:991px) and (max-width:1023px)
-{
-    div{
-        font-family: 'Averta-Regular';
-    }
-    
-    .titulo{
-        font-family: 'Averta-Regular';
-        position: absolute;
-        margin-top: -65px;
-        margin-left: 95px;
-        font-size: 35px;
-        color: #017eff;
-    }
-    
-    .titulo2{
-        font-family: 'Averta-Regular';
-        position: absolute;
-        margin-top: -65px;
-        margin-left: 215px;
-        font-size: 35px;
-        color: #00da67;
-    }
-    
-    .flexiniciosesion{
-        font-family: 'Averta-Regular';
-        display: flex;
-        flex-direction: row-reverse;
-    }
-    
-    .rectangulo{
-        display: flex;
-        margin-top: -60px;
-        margin-right: 25px;
-        height: 40px;
-        width: 215Px;
-        background-color: #2c95ff;
-    }
-    
-    .linksindecoracion{
-        text-decoration:none;
-    }
-    
-    .entraryregistrarse{
-        margin-top: 9px;
-        margin-left: 15px;
-    }
-    
-    html{
-        font-family: 'Averta-Regular';
-        margin-left: -7px;
-        margin-top: -8.7px;
-    
-    }
-    
-    #header{
-        height: 83px;
-        background-color: white;
-    }
-    
-    #header2{
-        height: 45px;
-        background-color: #00da67;
-    }
-    
-    .container-fluid{
-        margin-top: -9.8px;
-        height: 45px;
-        background-color: #00da67;
-    }
-    
-    .navbar-collapse{
-        justify-content: center;
-    }
-    
-    .nav-item{
-        margin-left: 25px;
-        margin-right: 25px;
-    }
-    
-    .flex1{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        margin-left: 20%;
-        margin-right: 20%;
-    }
-    
-    #menu{
-        margin-top: 12px;
-    }
-    .gradient{
-        position: absolute;
-        width: 100.432222%;
-        height: 190%;
-        background: linear-gradient(165deg, white, white, rgb(190, 255, 255),#2cd5ff);
-        z-index: -1;
-    }
-    
-    .texto1{
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        margin-top: 60px;
-        margin-left: 15%;
-    }
-    
-    .img1{
-        display: flex;
-        flex-direction: row-reverse;
-        margin-right: 15%;
-        margin-top: 30px;
-    }
-    
-    .texto2{
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        margin-top: -295px;
-        margin-right: 15%;
-    }
-    
-    .flex2{
-        display: flex;
-        flex-direction: row-reverse;
-    }
-    
-    .img2{
-        display: flex;
-        flex-direction: row;
-        margin-left: 15%;
-        margin-top: 170px;
-    }
-    
+.flexiniciosesion{
+    font-family: 'Averta-Regular';
+    display: flex;
+    flex-direction: row-reverse;
 }
 
-@media screen and (min-width:767px) and (max-width:990px) 
-{   
+.rectangulo{
+    display: flex;
+    margin-top: -60px;
+    margin-right: 25px;
+    /*
+    position: absolute;
+    margin-top: -65px;
+    margin-left: 86.3%;*/
+    height: 40px;
+    width: 215Px;
+    background-color: #2c95ff;
+}
 
+.linksindecoracion{
+    text-decoration:none;
+}
 
-    .container-fluid{
-        height: 50px;
-        z-index: 10000;
-    }
+.entraryregistrarse{
+    /*position: absolute;
+    margin-top: -54px;
+    margin-left: 87%;*/
+    margin-top: 9px;
+    margin-left: 15px;
+}
 
-    .navbar-toggler{
-        margin-left: 30px;
-        z-index: 10000;
-    }
-    
-    .navbar-nav{
-        z-index: 10000;
-        width: 180px;
-        border-radius: 30px;
-        background-color: white;
-        margin-top: 15px;
-    }
+html{
+    font-family: 'Averta-Regular';
+    margin-left: -7px;
+    margin-top: -8.7px;
 
-    div{
-        font-family: 'Averta-Regular';
-    }
-    
-    .titulo{
-        font-family: 'Averta-Regular';
-        position: absolute;
-        margin-top: -65px;
-        margin-left: 95px;
-        font-size: 35px;
-        color: #017eff;
-    }
-    
-    .titulo2{
-        font-family: 'Averta-Regular';
-        position: absolute;
-        margin-top: -65px;
-        margin-left: 215px;
-        font-size: 35px;
-        color: #00da67;
-    }
-    
-    .flexiniciosesion{
-        font-family: 'Averta-Regular';
-        display: flex;
-        flex-direction: row-reverse;
-    }
-    
-    .rectangulo{
-        display: flex;
-        margin-top: -60px;
-        margin-right: 25px;
-        height: 40px;
-        width: 215Px;
-        background-color: #2c95ff;
-    }
-    
-    .linksindecoracion{
-        text-decoration:none;
-    }
-    
-    .entraryregistrarse{
-        margin-top: 9px;
-        margin-left: 15px;
-    }
-    
-    html{
-        font-family: 'Averta-Regular';
-        margin-left: -7px;
-        margin-top: -8.7px;
-    
-    }
-    
-    #header{
-        height: 83px;
-        background-color: white;
-    }
-    
-    #header2{
-        height: 45px;
-        background-color: #00da67;
-    }
-    
-    .container-fluid{
-        margin-top: -9.8px;
-        height: 45px;
-        background-color: #00da67;
-    }
-    
-    .navbar-collapse{
-        justify-content: center;
-    }
-    
-    .nav-item{
-        margin-left: 25px;
-        margin-right: 25px;
-    }
-    
-    .flex1{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        margin-left: 20%;
-        margin-right: 20%;
-    }
-    
-    #menu{
-        margin-top: 12px;
-    }
-    .gradient{
-        position: absolute;
-        width: 100.432222%;
-        height: 240%;
-        background: linear-gradient(165deg, white, white, rgb(190, 255, 255),#2cd5ff);
-        z-index: -1;
-    }
-    
-    .texto1{
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        margin-top: 60px;
-        margin-left: 15%;
-    }
-    
-    .img1{
-        display: flex;
-        flex-direction: row-reverse;
-        margin-right: 28%;
-        margin-left: 200px;
-        margin-top: 350px;
-    }
-    
-    .texto2{
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        margin-right: 15%;
-    }
-    
-    .flex2{
-        margin-top: 50px;
-        display: flex;
-        margin-left: 15%;
-        margin-top: 350px;
-        flex-direction: column-reverse  ;
-    }
-    
-    .img2{
-        position: absolute;
-        margin-left:  20%;
-        margin-top: 350px;
-    }
+}
+
+#header{
+    height: 83px;
+    background-color: white;
+    margin-top: -5px;
+}
+
+#header2{
+    height: 45px;
+    background-color: #00da67;
+}
+
+.container-fluid{
+    margin-top: -9.8px;
+    height: 45px;
+    background-color: #00da67;
+}
+
+.navbar-collapse{
+    justify-content: center;
+}
+
+.nav-item{
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.flex1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+#menu{
+    margin-top: 12px;
+}
+.gradient{
+    position: absolute;
+    width: 100.432222%;
+    height: 250%;
+    background: linear-gradient(165deg, white, white, rgb(190, 255, 255),#2cd5ff);
+    z-index: -1;
+}
+
+.texto1{
+    display: flex;
+    margin-right: 50px;
+    flex-direction: column;
+}
+
+.flex1{
+    display: flex;
+    margin-top: 50px;
+}
+
+.texto2{
+    display: flex;
+    flex-direction: column;
+}
+
+.img2{
+    margin-right: 50px;
+}
+
+.flex2{
+    margin-top: 100px;
+}
+
+footer{
+    position: absolute;
+    margin-top: 15%;
+    width: 100.3%;
+    background-color: white;
+}
+
+.flexfooter1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.flexfooter2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 150px;
+}
+
+.flexfooter3{
+    display: flex;
+    flex-direction: column;
+    padding-right: 60px;
+    padding-left: 60px;
+}
+
+.flexfooter4{
+    display: flex;
+    flex-direction: column;
+    padding-right: 60px;
+    padding-left: 60px;
+}
+
+.columnas{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.columna1{
+    display: flex;
+    flex-direction: column;
+    padding-right: 60px;
+    padding-left: 60px;
+}
+
+.titulo3{
+    font-family: 'Averta-Regular';
+    font-size: 20px;
+    color: #017eff;
+}
+
+.titulo4{
+    font-family: 'Averta-Regular';
+    font-size: 20px;
+    color: #00da67;
+}
+
+.flexcartas{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top:100px;
+}
+
+.card{
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    padding-top: 40px;
+}
+
+.card:hover{
+    transition: all 0.6s ease;
+    scale: 1.08;
+}
+
+.card-text{
+    font-size: 15px;
+}
+
+.card-img-top{
+    width: 10px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    min-height: 50%;
+}
+
+.carousel-control-prev{
+    margin-top: 130px;
+}
+.carousel-control-next{
+    margin-top: 130px;
 }

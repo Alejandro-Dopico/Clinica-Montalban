@@ -19,6 +19,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+.juntos {
+    display: flex;
+    flex-direction: row;
 }
 
 /* Carta */
@@ -46,6 +52,10 @@
 
 
 /* Buttons bootsrap 5.0 "btn" */
+
+.btn-cliente {
+    background-color: #00da67;
+}
 
 .titulo-cita{
     font-size: 22px;

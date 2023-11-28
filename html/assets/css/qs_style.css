@@ -105,38 +105,14 @@ html{
 .gradient{
     position: absolute;
     width: 100.432222%;
-    height: 2000px;
+    height: 180%;
     background: linear-gradient(165deg, white, white, rgb(190, 255, 255),#2cd5ff);
     z-index: -1;
 }
 
-.texto1{
-    display: flex;
-    margin-right: 50px;
-    flex-direction: column;
-}
-
-.flex1{
-    display: flex;
-    margin-top: 50px;
-}
-
-.texto2{
-    display: flex;
-    flex-direction: column;
-}
-
-.img2{
-    margin-right: 50px;
-}
-
-.flex2{
-    margin-top: 100px;
-}
-
 footer{
     position: absolute;
-    margin-top: 5.5%;
+    margin-top: 4%;
     width: 100.3%;
     background-color: white;
 }
@@ -197,44 +173,39 @@ footer{
     color: #00da67;
 }
 
-.flexcartas{
+
+
+
+.imagenqs{
+    width: 100%;
+}
+
+.tituloqs{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Averta-Regular';
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.flexhistoria{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.flexqs{
     display: flex;
     flex-direction: row;
+    margin-top: 50px;
     justify-content: center;
-    margin-top:100px;
+    padding: 50px;
+    background-color: rgba(255,255,255,0.5);
+    box-shadow: 0px 0px 20px 0px black;
 }
 
-.card{
-    margin: 20px;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    padding-top: 40px;
-}
-
-.card:hover{
-    transition: all 0.6s ease;
-    scale: 1.08;
-}
-
-.card-text{
-    font-size: 15px;
-}
-
-.card-img-top{
-    width: 10px;
-    height: 300px;
-    background-size: cover;
-    background-position: center;
-    min-height: 50%;
-}
-
-.carousel-control-prev{
-    margin-top: 130px;
-}
-.carousel-control-next{
-    margin-top: 130px;
-}
 .Copyright{
     display: flex;
     justify-content: center;

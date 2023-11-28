@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -29,10 +28,10 @@
             <div class="form-information-childs">
                 <h2>Inicia sesion</h2>
                 <p>Introduce tus datos</p>
-                <form class="form">
+                <form action="php/login_be.php" method="POST" class="form">
                     <label>
-                        <i class='bx bx-envelope' ></i>
-                        <input type="text" placeholder="NIF/DNI" maxlength="9" required>
+                        <i class='bx bx-user-circle'></i>
+                        <input type="text" placeholder="NIF/DNI" maxlength="9" name="dni" required>
                     </label>
                     <label class="passwordeye">
                         <i class='bx bx-lock' ></i>

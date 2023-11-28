@@ -79,7 +79,17 @@ document.getElementsByClassName("calendar");
 		for (let p = f; p > 0; p--) h += `<div class='day prev-date'>${a - p + 1}</div>`;
 		for (let $ = 1; $ <= u; $++) $ < new Date().getDate() && c === new Date().getFullYear() && s === new Date().getMonth() || m(c, s).includes($) ? h += `<div class='day tillCurrentDate'> ${$} </div>` : $ === new Date().getDate() && c === new Date().getFullYear() && s === new Date().getMonth() ? h += `<div class='day today'>${$} </div>` : s === new Date().getMonth() && c === new Date().getFullYear() || s === v && c === new Date().getFullYear() ? h += `<div class="day">${$}</div>` : h += `<div class="day futureDays">${$}</div>`;
 		for (let x = 1; x <= b; x++) h += `<div class='day nxt-date'>${x}</div>`;
-		
+		for (let $ = 8; $ <= 20; $++) {
+			let hora = ($ < 10 ? "0" : "") + $ + ":00"; // Formato de hora: "08:00", "09:00", ...
+			let disponible = horas_disponibles.includes(hora);
+			let btnClass = disponible ? "event-time meeting" : "event-time meeting btnDisable";
+			
+			h += `<div class="button-full" id="prepTime_${$}">
+				<button onclick="meetTime('prepTime_${$}')" class="${btnClass}" ${disponible ? "" : "disabled"} >${hora}</button>
+				${disponible ? `<button onclick="confirmMeeting('${hora}')" class="confirm-btn">Confirmar</button>` : ""}
+			</div>`;
+		}
+
 		n.innerHTML = h,
 			function e() {
 				let t = document.querySelectorAll(".day"),

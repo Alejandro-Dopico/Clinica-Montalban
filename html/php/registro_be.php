@@ -33,7 +33,7 @@ if (mysqli_num_rows($resultado_dni) > 0) {
     echo '
         <script>
             alert("El DNI ya está registrado. Por favor, utiliza otro DNI.");
-            window.location.assign("https://clinicamontalban.com/registro.php"); 
+            window.location.assign("https://clinicamontalban.com/login.php"); 
         </script>
     ';
 } elseif (mysqli_num_rows($resultado_correo) > 0) {
@@ -41,7 +41,7 @@ if (mysqli_num_rows($resultado_dni) > 0) {
     echo '
         <script>
             alert("El correo ya está registrado. Por favor, utiliza otro correo.");
-            window.location.assign("https://clinicamontalban.com/registro.php"); 
+            window.location.assign("https://clinicamontalban.com/login.php"); 
         </script>
     ';
 } else {
@@ -56,17 +56,23 @@ if (mysqli_num_rows($resultado_dni) > 0) {
     $enviar2 = mysqli_query($conexion, $query2);
 
     if ($enviar && $enviar2) {
+        session_start();
         echo '
             <script>
                 alert("El registro se ha completado de forma exitosa");
-                window.location.assign("https://clinicamontalban.com/login.php");
             </script>
+            
         ';
+        
+        if(!isset($_SESSION['DNI'])){
+            header("Location: ../client.php");
+            exit;
+        }
     } else {
         echo '
             <script>
                 alert("No se ha podido completar el registro");
-                window.location.assign("https://clinicamontalban.com/login.php");
+                
             </script>
         ';
     }

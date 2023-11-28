@@ -1,33 +1,40 @@
 <?php
 
-session_start();
-
+if(session_start()){
 
 include 'conexion_be.php';
 
-$DNI = $_POST['DNI'];
+$DNI = $_POST['dni'];
 $contrasena = $_POST['contrasena'];
-$contrasena = hash('sha512',$contrasena);
-$validar_login = mysqli_query($conexion, "SELECT DNI, contrasena FROM cliente WHERE DNI='$DNI' and contrasena=$contrasena" );
 
-if(mysqli_num_rows($validar_login) > 0){
-    $_SESSION['usuario']=$DNI;
-header("locatio: ../index.php");
-exit;
-}else{
-echo '
-<script>
-    alert("Usuario no existe, por favor verifique los datos introducidos");
-    window.location = "../login.php";
+// Escapar las variables antes de usarlas en una consulta SQL para prevenir SQL Injection
+$DNI = mysqli_real_escape_string($conexion, $DNI);
 
-</script>
-';
-exit;
+// Hashear la contraseña antes de compararla con la base de datos
+$contrasena = hash('sha512', $contrasena);
 
+// Utiliza una consulta preparada para prevenir SQL Injection
+$validar_login = mysqli_prepare($conexion, "SELECT DNI, contrasena FROM cliente WHERE DNI=? and contrasena=?");
+mysqli_stmt_bind_param($validar_login, "ss", $DNI, $contrasena);
+mysqli_stmt_execute($validar_login);
+mysqli_stmt_store_result($validar_login);
+
+if (mysqli_stmt_num_rows($validar_login) > 0) {
+    $_SESSION['usuario'] = $DNI;
+    
+    header("Location: ../client.php");
+    exit;
+} else {
+    echo '
+    <script>
+        alert("Usuario no existe, por favor verifique los datos introducidos");
+        window.location = "../login.php";
+    </script>
+    ';
+    exit;
 }
 
+mysqli_stmt_close($validar_login);
 
-
-
-
+}
 ?>

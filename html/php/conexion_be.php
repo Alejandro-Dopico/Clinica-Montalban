@@ -1,7 +1,7 @@
 <?php
 
 
-$conexion = mysqli_connect("mysql-adminmontalban.alwaysdata.net","329292_admin","adminmontalban!","adminmontalban_clinica");
+$conexion = mysqli_connect("localhost","usuario","usuario","adminmontalban_clinica");
 
 
 

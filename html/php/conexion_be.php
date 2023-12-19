@@ -9,8 +9,6 @@ $conexion = mysqli_connect("localhost","usuario","usuario","adminmontalban_clini
 
 if (!$conexion) {
     die("Error de conexión: " . mysqli_connect_error());
-} else {
-    echo "Conexión exitosa";
 }
 
 

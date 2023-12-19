@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +10,8 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 </head>
 <body>
+    <div class="gradient"></div>
+
     <header class="main-header">
 
       <nav class="navbar navbar-expand-lg bg-body-tertiary custom-nav" style="background-color: white !important;">
@@ -28,16 +29,16 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">INICIO</a>
+                  <a class="nav-link active" aria-current="page" href="index.php">INICIO</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">ESPECIALIDADES</a>
+                  <a class="nav-link" href="eindex.php">ESPECIALIDADES</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">QUIENES SOMOS</a>
+                  <a class="nav-link" href="qsindex.php">QUIÉNES SOMOS</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">CONTACTO</a>
+                  <a class="nav-link" href="contacto.php">CONTACTO</a>
                 </li>
               </ul>
             </div>
@@ -61,7 +62,51 @@
             </div>
         </nav>
       </header>
-      <div id="carouselExample" class="carousel slide">
+
+
+
+    <!--
+    <header id="main-header">
+      
+      
+      <nav class="navbar navbar-expand-lg bg-body-tertiary custom-nav">
+
+        <div id="header">
+          <a href="index.html"><div style="margin-top: 10px; margin-left: 15px;"><img src="assets/img/LOGO-COLOR.png" width="80px" height="80px" alt="LOGOTIPO DE LA EMPRESA"></div></a>  
+          <div class="titulo">Clinica</div>
+          <div class="titulo2">Montalban</div>
+        </div>
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">INICIO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="eindex.html">ESPECIALIDADES</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="qsindex.html">QUIÉNES SOMOS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">CONTACTO</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="flexiniciosesion">
+          <div class="rectangulo">
+            <a class="linksindecoracion" href="login.html"><div style="color: white; font-weight: bold;" class="entraryregistrarse">PEDIR CITA</div></a>
+          </div>
+        </div>
+        </nav>
+      </header>
+                -->
+                
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner" style="max-height: 400px;">
             <div class="carousel-item active">
                 <img src="assets/img/carousel1.jpg" class="d-block w-100 img-fluid" alt="...">
@@ -73,14 +118,15 @@
                 <img src="assets/img/carousel3.jpg" class="d-block w-100 img-fluid" alt="...">
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
         </button>
+      
     </div>
 
     <div class="flex-pagina">
@@ -88,18 +134,45 @@
         <div class="texto1">
           <p style="font-size: 40px; font-weight: bolder;">Quienes somos</p>
           <p style="width: 600px; font-size: 30px;">El equipo de Clinica Montalban trabaja con gran profesionalidad para ofrecer y garantizar una asistencia de primera calidad.</p>
-          <button style="border-radius: 10px; box-shadow: 0  2px 8px 5px rgba(0, 0, 0, 0.15);" type="button" class="btn btn-light">Saber más</button>
+          <a href="qsindex.html" style="border-radius: 10px; box-shadow: 0  2px 8px 5px rgba(0, 0, 0, 0.15);" type="button" class="btn btn-light">Saber más</a>
         </div>
         <img class="img1" style="border-radius: 20px; box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15);" width="500px" src="assets/img/img1.jpg">
       </div>
 
       <div class="flex1 flex2">
-        <img class="img2" style="border-radius: 20px; box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15);" width="500px" src="assets/img/img1.jpg">
+        <img class="img2" style="border-radius: 20px; box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15);" width="500px" src="assets/img/especialistas.jpg">
         <div class="texto1">
-          <p style="font-size: 40px; font-weight: bolder;">Quienes somos</p>
-          <p style="width: 600px; font-size: 30px;">El equipo de Clinica Montalban trabaja con gran profesionalidad para ofrecer y garantizar una asistencia de primera calidad.</p>
-          <button style="border-radius: 10px; box-shadow: 0  2px 8px 5px rgba(0, 0, 0, 0.15);" type="button" class="btn btn-light">Saber más</button>
+          <p style="font-size: 40px; font-weight: bolder;">Especialistas</p>
+          <p style="width: 600px; font-size: 30px;">El equipo de Clinica Montalban consta con los mejores profesionales para cada una de las especialidades en la sanidad.</p>
+          <a href="eindex.html" style="border-radius: 10px; box-shadow: 0  2px 8px 5px rgba(0, 0, 0, 0.15);" type="button" class="btn btn-light">Saber más</a>
         </div>
+      </div>
+    </div>
+
+    <div class="flexcartas">
+      <div class="card" style="width: 22rem;">
+        <img src="assets/img/icono_curar-1.png" width="50px" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Curar</h5>
+          <p class="card-text">Nuestro equipo de profesionales combina talento, vocación, pasión y una amplia trayectoria para brindarte una atención médica eficiente y personalizada.</p>
+        </div>
+        <img src="assets/img/tarjeta1.png" class="card-img-top" alt="...">      
+      </div>
+      <div class="card" style="width: 22rem;">
+        <img src="assets/img/Icono_cuidar-1.png" width="55px" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Cuidar</h5>
+          <p class="card-text">Nos comprometemos a ofrecerte una alta capacidad médica con un trato humano y cercano para crear un entorno de confianza entre profesionales y pacientes.</p>
+        </div>
+        <img src="assets/img/tarjeta2.jpg" class="card-img-top" alt="...">
+      </div>
+      <div class="card" style="width: 22rem;">
+        <img src="assets/img/iconoservicios-1.png" width="40px" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Mi Servicios</h5>
+          <p class="card-text">Queremos que tu paso por Clinica Montalban sea una experiencia agradable para ti. Por eso, ponemos a t u disposición una serie de servicios adicionales con la finalidad de mejorar tu satisfacción y amenizar tu estancia.</p>
+        </div>
+        <img src="assets/img/tarjeta3.jpg" style="background-size: cover;" class="card-img-top" alt="...">
       </div>
     </div>
 
@@ -118,7 +191,7 @@
             contacto@clinicamontalban.com<br>
           </p>
           <div class="flexfooter2">
-              <a href="" class="instagram"><img width="30px" src="assets/img/instagram.png"></a>
+              <a href="https://www.instagram.com/clinica.montalban/" class="instagram"><img width="30px" src="assets/img/instagram.png"></a>
               <a href="" class="instagram"><img width="30px" src="assets/img/facebook.png"></a>
               <a href="" class="instagram"><img width="30px" src="assets/img/twitter.png"></a>
           </div>
@@ -126,22 +199,25 @@
       
 
         <div class="flexfooter3">
-          <a href="">Politica de privacidad</a>
-          <a href="">Política de cookies</a>
-          <a href="">Aviso Legal</a>
-          <a href="">Cumplimiento Normativo</a>
-          <a href="">Código ético y de conducta</a>
+          <a class="footertext" href="">Politica de privacidad</a>
+          <a class="footertext"  href="">Política de cookies</a>
+          <a class="footertext"  href="">Aviso Legal</a>
+          <a class="footertext"  href="">Cumplimiento Normativo</a>
+          <a class="footertext"  href="">Código ético y de conducta</a>
         </div>
 
 
 
         <div class="flexfooter4">
-          <a href="">Documentación de interés</a>
-          <a href="">FAQS</a>
-          <a href="">Servicios externos vinculados</a>
+          <a class="footertext"  href="">Documentación de interés</a>
+          <a class="footertext"  href="">FAQS</a>
+          <a class="footertext"  href="">Servicios externos vinculados</a>
         </div>
       </div>
+      <div class="Copyright">© Copyright 2023. Clínica Montalban S.A.</div>
     </footer>
+
+    
 
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/login_script.js"></script>

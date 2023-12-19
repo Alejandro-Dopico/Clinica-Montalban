@@ -1,0 +1,45 @@
+/* Cuenta-style.css */
+
+body {
+    font-family: 'Averta-Regular';
+}
+
+header {
+    text-align: center;
+    background-color: #00da67;
+    color: white;
+    padding: 10px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.campo {
+    margin-top: 30px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+.form-check-label {
+    padding-left: 0;
+}
+
+.btn-primary {
+    margin-top: 30px;
+    background-color: #00da67;
+    border: none;
+}
+
+
+.btn-primary:hover {
+    background-color: #009a52;
+}
+
+/* Añade más estilos según tus preferencias */

@@ -10,30 +10,48 @@
     
 ?>
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clinica Montalban</title>
     <link rel="stylesheet" href="/assets/css/client-style.css">
     <link href="https://db.onlinewebfonts.com/c/150037e11f159dca84bc4c04549094b6?family=Averta-Regular" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="/images/logo-ico.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/hjsCalendar.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 
 <body>
     <header>
-        <div class="gradient"></div>
-        <div id="header">
-            <a href="index.html">
+        <div id="espacio-blanco" style="width: 100px;">
+            &nbsp;
+        </div>
+        <div class="logo-clinica">
+            <a href="index.php">
                 <div style="margin-top: 10px; margin-left: 15px;"><img src="/assets/img/LOGO-COLOR.png" width="80px"
                         height="80px" alt="LOGOTIPO DE LA EMPRESA"></div>
             </a>
             <div class="titulo">Clinica</div>
             <div class="titulo2">Montalban</div>
+        
         </div>
-        <hr class="header-separator">
+        <div class="btn-group">
+            <button class="btn btn-light btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Bienvenido, <?php echo $_SESSION['nombre']; ?>!
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.php">Inicio</a></li>
+                <li><a class="dropdown-item" href="cuenta.php">Modificar Cuenta</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="php/cerrar_sesion.php">Cerrar Sesión</a></li>
+            </ul>
+        </div>
+        
+
     </header>
 
     <section class="title-top">
@@ -64,7 +82,7 @@
             <div class="card" style="width: 18rem; max-width: 100%;">
                 <img src="assets/img/clinica-cita.jpg" class="card-img-top" alt="Cita - Medico de cabecera">
                 <div class="card-body">
-                    <h5 class="card-title">Medico de cabeceraAAAA</h5>
+                    <h5 class="card-title">Medico de cabecera</h5>
                     <p class="card-text">Tienes un calendario en tiempo real para poder pedir cita.</p>
                     <a href="#" class="btn btn-primary" onclick="$('#cita').modal('show');">Abrir Calendario</a>
                 </div>

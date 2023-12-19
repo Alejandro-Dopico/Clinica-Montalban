@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,20 +11,16 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="gradient"></div>
-    <header id="main-header">
-      <div id="header">
-          <a href="index.html"><div style="margin-top: 10px; margin-left: 15px;"><img src="assets/img/LOGO-COLOR.png" width="80px" height="80px" alt="LOGOTIPO DE LA EMPRESA"></div></a>  
+    <header class="main-header">
+
+      <nav class="navbar navbar-expand-lg bg-body-tertiary custom-nav" style="background-color: white !important;">
+
+          <a href="index.html">
+            <div><img src="assets/img/LOGO-COLOR.png" width="80px" height="80px" alt="LOGOTIPO DE LA EMPRESA"></div>
+          </a> 
           <div class="titulo">Clinica</div>
           <div class="titulo2">Montalban</div>
-          <div class="flexiniciosesion">
-              <div class="rectangulo">
-                  <a class="linksindecoracion" href="login.php"><div style="color: white; font-weight: bold;" class="entraryregistrarse">ENTRAR  |  REGISTRARSE</div></a>
-              </div>
-          </div>
-      </div>
-      
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
           <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -36,16 +33,6 @@
                 <li class="nav-item">
                   <a class="nav-link" href="#">ESPECIALIDADES</a>
                 </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      INSTALACIONES
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Santa Coloma</a></li>
-                    <li><a class="dropdown-item" href="#">Badalona</a></li>
-                    <li><a class="dropdown-item" href="#">Sant Adrià</a></li>
-                  </ul>
-                </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">QUIENES SOMOS</a>
                 </li>
@@ -55,6 +42,23 @@
               </ul>
             </div>
           </div>
+          <div class="flexiniciosesion">
+            <div class="rectangulo">
+
+              <?php
+                  // Verificar si la sesión está iniciada
+                  session_start();
+                  if (isset($_SESSION['usuario'])) {
+                      // Si está iniciada, mostrar el botón con la función onclick
+                      echo '<a class="linksindecoracion" href="client.php"><div style="color: white; font-weight: bold;" class="entraryregistrarse">MI CUENTA</div></a>';
+                  } else {
+                      // Si no está iniciada, mostrar el enlace normal
+                      echo '<a class="linksindecoracion" href="login.php"><div style="color: white; font-weight: bold;" class="entraryregistrarse">PEDIR CITA</div></a>';
+                  }
+              ?>
+
+            </div>
+            </div>
         </nav>
       </header>
       <div id="carouselExample" class="carousel slide">

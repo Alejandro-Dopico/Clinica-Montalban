@@ -43,11 +43,32 @@ mysqli_stmt_fetch($persona);
 
 <body>
     <header>
-        <p>Tu cuenta:</p>
+        <div id="espacio-blanco" style="width: 100px;">
+            &nbsp;
+        </div>
+        <div class="logo-clinica">
+            <a href="index.php">
+                <div style="margin-top: 10px; margin-left: 15px;"><img src="/assets/img/LOGO-COLOR.png" width="80px"
+                        height="80px" alt="LOGOTIPO DE LA EMPRESA"></div>
+            </a>
+            <div class="titulo">Clinica</div>
+            <div class="titulo2">Montalban</div>
+        </div>
+        <div class="btn-group">
+            <button class="btn btn-light btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Bienvenido, <?php echo $_SESSION['nombre']; ?>!
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="client.php">Servicios</a></li>
+                <li><a class="dropdown-item" href="cuenta.php">Modificar Cuenta</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="php/cerrar_sesion.php">Cerrar Sesión</a></li>
+            </ul>
+        </div>
     </header>
-    <form>
+    <form action="php/cuenta_be.php" method="POST" class="form">
         <div class="form-row">
-            <div class="form-group col-md-6 campo">
+            <div class="form-group col-md-6 nombre">
                 <label for="inputName4">Nombre</label>
                 <input type="text" class="form-control" id="inputName4" placeholder="Nombre" value="<?php echo $nombre; ?>">
             </div>
@@ -64,14 +85,6 @@ mysqli_stmt_fetch($persona);
                 <input type="tel" class="form-control" id="inputPhone4" placeholder="Telefono" value="<?php echo $telefono; ?>">
             </div>
         </div>
-        <div class="form-group col-md-4 campo">
-            <label for="inputState">País</label>
-            <select id="inputState" class="form-control">
-                <option selected>Selecciona...</option>
-                <option>España</option>
-                <option>Francia</option>
-            </select>
-        </div>
         </div>
         <div class="form-group campo">
             <div class="form-check">
@@ -84,7 +97,23 @@ mysqli_stmt_fetch($persona);
         <button type="submit" class="btn btn-primary">Modificar la cuenta</button>
     </form>
 
+    <script>
+        $(document).ready(function () {
+            // Deshabilitar el botón al cargar la página
+            $('button[type="submit"]').prop('disabled', true);
+
+            // Habilitar/deshabilitar el botón cuando el checkbox cambia
+            $('#gridCheck').change(function () {
+                if ($(this).is(':checked')) {
+                    $('button[type="submit"]').prop('disabled', false);
+                } else {
+                    $('button[type="submit"]').prop('disabled', true);
+                }
+            });
+        });
+    </script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>

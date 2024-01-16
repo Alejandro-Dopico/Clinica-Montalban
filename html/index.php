@@ -16,8 +16,8 @@
 
       <nav class="navbar navbar-expand-lg bg-body-tertiary custom-nav" style="background-color: white !important;">
 
-          <a href="index.html">
-            <div><img src="assets/img/LOGO-COLOR.png" width="80px" height="80px" alt="LOGOTIPO DE LA EMPRESA"></div>
+          <a href="index.php">
+            <div><img src="assets/img/LOGO-COLOR.png" width="80px" class="imagenlogo" height="80px" alt="LOGOTIPO DE LA EMPRESA"></div>
           </a> 
           <div class="titulo">Clinica</div>
           <div class="titulo2">Montalban</div>
@@ -134,7 +134,7 @@
         <div class="texto1">
           <p style="font-size: 40px; font-weight: bolder;">Quienes somos</p>
           <p style="width: 600px; font-size: 30px;">El equipo de Clinica Montalban trabaja con gran profesionalidad para ofrecer y garantizar una asistencia de primera calidad.</p>
-          <a href="qsindex.html" style="border-radius: 10px; box-shadow: 0  2px 8px 5px rgba(0, 0, 0, 0.15);" type="button" class="btn btn-light">Saber más</a>
+          <a href="qsindex.php" style="border-radius: 10px; box-shadow: 0  2px 8px 5px rgba(0, 0, 0, 0.15);" type="button" class="btn btn-light">Saber más</a>
         </div>
         <img class="img1" style="border-radius: 20px; box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15);" width="500px" src="assets/img/img1.jpg">
       </div>
@@ -144,7 +144,7 @@
         <div class="texto1">
           <p style="font-size: 40px; font-weight: bolder;">Especialistas</p>
           <p style="width: 600px; font-size: 30px;">El equipo de Clinica Montalban consta con los mejores profesionales para cada una de las especialidades en la sanidad.</p>
-          <a href="eindex.html" style="border-radius: 10px; box-shadow: 0  2px 8px 5px rgba(0, 0, 0, 0.15);" type="button" class="btn btn-light">Saber más</a>
+          <a href="eindex.php" style="border-radius: 10px; box-shadow: 0  2px 8px 5px rgba(0, 0, 0, 0.15);" type="button" class="btn btn-light">Saber más</a>
         </div>
       </div>
     </div>

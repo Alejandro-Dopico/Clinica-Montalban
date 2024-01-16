@@ -17,7 +17,7 @@
       <nav class="navbar navbar-expand-lg bg-body-tertiary custom-nav" style="background-color: white !important;">
 
           <a href="index.html">
-            <div><img src="assets/img/LOGO-COLOR.png" width="80px" height="80px" alt="LOGOTIPO DE LA EMPRESA"></div>
+            <div><img src="assets/img/LOGO-COLOR.png" width="80px" class="imagenlogo" height="80px" alt="LOGOTIPO DE LA EMPRESA"></div>
           </a> 
           <div class="titulo">Clinica</div>
           <div class="titulo2">Montalban</div>

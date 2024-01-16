@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clinica Montalban | Especialidades</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/e_style.css">
     <link href="https://db.onlinewebfonts.com/c/150037e11f159dca84bc4c04549094b6?family=Averta-Regular" rel="stylesheet"> 
     <link rel="icon" type="image/x-icon" href="assets/img/logo-ico.png">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
@@ -17,7 +18,7 @@
       <nav class="navbar navbar-expand-lg bg-body-tertiary custom-nav" style="background-color: white !important;">
 
           <a href="index.html">
-            <div><img src="assets/img/LOGO-COLOR.png" width="80px" height="80px" alt="LOGOTIPO DE LA EMPRESA"></div>
+            <div><img src="assets/img/LOGO-COLOR.png" width="80px" class="imagenlogo" height="80px" alt="LOGOTIPO DE LA EMPRESA"></div>
           </a> 
           <div class="titulo">Clinica</div>
           <div class="titulo2">Montalban</div>
@@ -62,49 +63,49 @@
             </div>
         </nav>
       </header>
+<br><br><br><br><br>
 
-
-
-      <section id="ginecologia">
+    <div class="especialidades">
+      <section class="tarjeta" id="ginecologia">
         <h2>Ginecología</h2>
-        <img src="assets/img/ginecologo.jpg" alt="Imagen Ginecólogo">
+        <img src="assets/img/ginecologo.jpg" width="500px" class="imagen" alt="Imagen Ginecólogo">
         <p>
             La ginecología es la especialidad médica que se encarga del estudio de las enfermedades del sistema reproductor femenino. Nuestros profesionales altamente calificados brindan atención integral a las mujeres en todas las etapas de su vida.
         </p>
     </section>
 
-    <section id="cardiologia">
+    <section class="tarjeta" id="cardiologia">
         <h2>Cardiología</h2>
-        <img src="assets/img/cardiologo.jpg" alt="Imagen Cardiólogo">
+        <img src="assets/img/cardiologo.jpg" width="500px" class="imagen" alt="Imagen Cardiólogo">
         <p>
             La cardiología se especializa en el diagnóstico y tratamiento de enfermedades del corazón y del sistema circulatorio. Contamos con un equipo de cardiólogos dedicados a proporcionar la mejor atención a nuestros pacientes.
         </p>
     </section>
 
-    <section id="dermatologia">
+    <section class="tarjeta" id="dermatologia">
         <h2>Dermatología</h2>
-        <img src="assets/img/dermatologo.jpg" alt="Imagen Dermatólogo">
+        <img src="assets/img/dermatologo.jpg" width="500px" class="imagen" alt="Imagen Dermatólogo">
         <p>
             La dermatología se ocupa de las enfermedades de la piel, cabello y uñas. Nuestros dermatólogos expertos ofrecen diagnóstico y tratamiento para una amplia variedad de afecciones dermatológicas.
         </p>
     </section>
 
-    <section id="neurologia">
+    <section class="tarjeta" id="neurologia">
         <h2>Neurología</h2>
-        <img src="assets/img/neurologo.jpg" alt="Imagen Neurólogo">
+        <img src="assets/img/neurologo.jpg" width="500px" class="imagen" alt="Imagen Neurólogo">
         <p>
             La neurología se centra en el estudio y tratamiento de las enfermedades del sistema nervioso. Contamos con neurólogos capacitados para abordar diversas condiciones neurológicas y brindar el mejor cuidado posible.
         </p>
     </section>
 
-    <section id="ortopedia">
+    <section class="tarjeta" id="ortopedia">
         <h2>Ortopedia</h2>
-        <img src="assets/img/ortopedia.webp" alt="Imagen Ortopedista">
+        <img src="assets/img/ortopedia.webp" width="500px" class="imagen" alt="Imagen Ortopedista">
         <p>
             La ortopedia se especializa en el diagnóstico y tratamiento de enfermedades y lesiones del sistema musculoesquelético. Nuestros ortopedistas trabajan para mejorar la movilidad y calidad de vida de nuestros pacientes.
         </p>
     </section>
-
+    </div>
 
 
       <footer>
@@ -145,6 +146,7 @@
             <a class="footertext"  href="">Servicios externos vinculados</a>
           </div>
         </div>
+        <div class="Copyright">© Copyright 2023. Clínica Montalban S.A.</div>
       </footer>
   
       <script src="bootstrap/js/bootstrap.min.js"></script>

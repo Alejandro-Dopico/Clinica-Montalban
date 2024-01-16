@@ -12,19 +12,16 @@
 <body>
     <div class="gradient"></div>
 
-    <header id="main-header">
-      <div id="header">
-          <a href="index.php"><div style="margin-top: 10px; margin-left: 15px;"><img src="assets/img/LOGO-COLOR.png" width="80px" height="80px" alt="LOGOTIPO DE LA EMPRESA"></div></a>  
+    <header class="main-header">
+
+      <nav class="navbar navbar-expand-lg bg-body-tertiary custom-nav" style="background-color: white !important;">
+
+          <a href="index.html">
+            <div><img src="assets/img/LOGO-COLOR.png" width="80px" class="imagenlogo" height="80px" alt="LOGOTIPO DE LA EMPRESA"></div>
+          </a> 
           <div class="titulo">Clinica</div>
           <div class="titulo2">Montalban</div>
-          <div class="flexiniciosesion">
-              <div class="rectangulo">
-                  <a class="linksindecoracion" href="login.php"><div style="color: white; font-weight: bold;" class="entraryregistrarse">ENTRAR  |  REGISTRARSE</div></a>
-              </div>
-          </div>
-      </div>
-      
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
           <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -32,20 +29,37 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="index.php">INICIO</a>
+                  <a class="nav-link "href="index.php">INICIO</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="eindex.php">ESPECIALIDADES</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="qsindex.php">QUIENES SOMOS</a>
+                  <a class="nav-link" href="qsindex.php">QUIÉNES SOMOS</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page"  href="contacto.php">CONTACTO</a>
+                  <a class="nav-link active"  aria-current="page"  href="contacto.php">CONTACTO</a>
                 </li>
               </ul>
             </div>
           </div>
+          <div class="flexiniciosesion">
+            <div class="rectangulo">
+
+              <?php
+                  // Verificar si la sesión está iniciada
+                  session_start();
+                  if (isset($_SESSION['usuario'])) {
+                      // Si está iniciada, mostrar el botón con la función onclick
+                      echo '<a class="linksindecoracion" href="client.php"><div style="color: white; font-weight: bold;" class="entraryregistrarse">MI CUENTA</div></a>';
+                  } else {
+                      // Si no está iniciada, mostrar el enlace normal
+                      echo '<a class="linksindecoracion" href="login.php"><div style="color: white; font-weight: bold;" class="entraryregistrarse">PEDIR CITA</div></a>';
+                  }
+              ?>
+
+            </div>
+            </div>
         </nav>
       </header>
       <br><br><br><br><br><br>
@@ -134,7 +148,6 @@
         </div>
         <div class="Copyright">© Copyright 2023. Clínica Montalban S.A.</div>
       </footer>
-      #
       <script src="bootstrap/js/bootstrap.min.js"></script>
       <script src="assets/js/login_script.js"></script>
 </body>

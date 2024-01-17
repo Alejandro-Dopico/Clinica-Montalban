@@ -8,11 +8,17 @@ div{
     font-family: 'Averta-Regular';
 }
 
+.imagenlogo{
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
 .titulo{
     font-family: 'Averta-Regular';
     /*position: absolute;
     margin-top: -65px;
     margin-left: 95px;*/
+    margin-top: 10px;
     font-size: 35px;
     color: #017eff;
 }
@@ -22,6 +28,7 @@ div{
     /*position: absolute;
     margin-top: -65px;
     margin-left: 215px;*/
+    margin-top: 10px;
     font-size: 35px;
     color: #00da67;
 }

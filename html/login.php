@@ -15,7 +15,7 @@
     <div class="container-form login">
         <div class="information">
             <div class="info-childs">
-                    <a href="index.html">
+                    <a href="index.php">
                     <img src="/assets/img/LOGO-COLOR.png" width="120px" height="120px"> 
                 </a>
                 <h2>Registrate</h2>
@@ -43,7 +43,8 @@
                     <br>
                     <input type="submit" value="Iniciar Sesión">
                     <br><br>
-                    <button class="recovery-link" id="recovery-link">¿Olvidaste tu contraseña?</button >
+                    <button class="recovery-link" id="recovery-link">¿Olvidaste tu contraseña?</button>
+                    <div id="error-cuenta"></div>
                 </form>
             </div>
         </div>
@@ -53,7 +54,7 @@
     <div class="container-form register hide">
         <div class="information">
             <div class="info-childs">
-                <a href="index.html">
+                <a href="index.php">
                     <img src="/assets/img/LOGO-COLOR.png" width="120px" height="120px"> 
                 </a>
                 <h2>Contactanos</h2>
@@ -72,7 +73,6 @@
                         <input type="text" placeholder="Nombre" name="nombre" maxlength="50" required>
                         <input type="text" placeholder="Apellidos" name="apellidos" maxlength="50" required>
                     </label>
-                    <label>
                         <i class='bx bx-sidebar'></i>
                         <input type="text" placeholder="NIF/DNI" maxlength="9" name="dni" required>
                         <i class='bx bx-calendar'></i>
@@ -109,7 +109,7 @@
     <div class="container-form recovery hide-recovery">
         <div class="information">
             <div class="info-childs">
-                <a href="index.html">
+                <a href="index.php">
                     <img src="/assets/img/LOGO-COLOR.png" width="120px" height="120px"> 
                 </a>
                 <h2>Recuperación</h2>
@@ -134,9 +134,7 @@
             </div>
         </div>
     </div>
-    
-
     <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/login_script.js"></script>
+    <script src="assets/js/loginScript.js"></script>
 </body>
 </html>

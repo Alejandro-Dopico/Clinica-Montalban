@@ -14,7 +14,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clinica Montalban</title>
-    <link rel="stylesheet" href="/assets/css/client-style.css">
+    <link rel="stylesheet" href="/assets/css/client_style.css">
     <link href="https://db.onlinewebfonts.com/c/150037e11f159dca84bc4c04549094b6?family=Averta-Regular" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="/images/logo-ico.png">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 

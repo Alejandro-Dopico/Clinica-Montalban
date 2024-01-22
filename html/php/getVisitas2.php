@@ -21,7 +21,6 @@ if ($result) {
         $contenido[$i] = $visita;
     }
 
-    
 }
 $contenidoAñadir = json_encode($contenido);
 $file = '../assets/JSON/visitas.json';

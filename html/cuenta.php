@@ -3,27 +3,7 @@
 
 <?php
 session_start();
-include 'php/conexion_be.php';
-
-// Verificar si hay una sesión de usuario iniciada
-if (!isset($_SESSION['usuario'])) {
-    header("Location: ../login.php");
-    exit;
-}
-
-$DNI = $_SESSION['usuario'];
-
-// Preparar la consulta
-$persona = mysqli_prepare($conexion, "SELECT * FROM persona WHERE DNI = ?");
-mysqli_stmt_bind_param($persona, "s", $DNI);
-mysqli_stmt_execute($persona);
-
-// Definir variables para almacenar los resultados de la consulta
-mysqli_stmt_bind_result($persona, $DNI_result, $nombre, $apellido, $correo, $telefono, $direccion);
-
-// Obtener resultados
-mysqli_stmt_fetch($persona);
-
+include 'php/getDatosCuenta.php';
 ?>
 
 <head>
@@ -31,7 +11,7 @@ mysqli_stmt_fetch($persona);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clinica Montalban</title>
-    <link rel="stylesheet" href="/assets/css/cuenta-style.css">
+    <link rel="stylesheet" href="/assets/css/cuenta_style.css">
     <link href="https://db.onlinewebfonts.com/c/150037e11f159dca84bc4c04549094b6?family=Averta-Regular" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="/images/logo-ico.png">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
@@ -62,10 +42,13 @@ mysqli_stmt_fetch($persona);
                 <li><a class="dropdown-item" href="client.php">Servicios</a></li>
                 <li><a class="dropdown-item" href="cuenta.php">Modificar Cuenta</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="php/cerrar_sesion.php">Cerrar Sesión</a></li>
+                <li><a class="dropdown-item" href="php/cerrarSesion.php">Cerrar Sesión</a></li>
             </ul>
         </div>
     </header>
+    <section class="title-top">
+        <h1>Modifica los datos de tu cuenta</h1>
+    </section>
     <form action="php/cuenta_be.php" method="POST" class="form">
         <div class="form-row">
             <div class="form-group col-md-6 nombre">
@@ -97,21 +80,7 @@ mysqli_stmt_fetch($persona);
         <button type="submit" class="btn btn-primary">Modificar la cuenta</button>
     </form>
 
-    <script>
-        $(document).ready(function () {
-            // Deshabilitar el botón al cargar la página
-            $('button[type="submit"]').prop('disabled', true);
-
-            // Habilitar/deshabilitar el botón cuando el checkbox cambia
-            $('#gridCheck').change(function () {
-                if ($(this).is(':checked')) {
-                    $('button[type="submit"]').prop('disabled', false);
-                } else {
-                    $('button[type="submit"]').prop('disabled', true);
-                }
-            });
-        });
-    </script>
+    <script src="assets/js/confirmarSubmit.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
 
 </body>

@@ -1,3 +1,6 @@
+/* Este archivo JavaScript hace una llamada al fitchero getVisitas.php para recoger por listas de visitas
+    Y las almacena en listas de boostrap para printarlas. */
+
 let boton = document.getElementById("visitasBtn");
 boton.addEventListener("click", generarVisitas);
 
@@ -6,8 +9,6 @@ function generarVisitas() {
         url: '../php/getVisitas.php',
         method: 'GET',
         success: function (data) {
-            console.log('Respuesta del servidor:', data);
-
             var container = document.getElementById("generarVisitas");
 
             // Envuelve el contenido en un div
@@ -15,6 +16,7 @@ function generarVisitas() {
 
             // Establece el contenido en el contenedor principal
             container.innerHTML = contenido;
+
         },
         error: function (xhr, status, error) {
             console.log('Error en la solicitud AJAX:', xhr.responseText);

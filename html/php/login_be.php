@@ -32,15 +32,10 @@ if (mysqli_stmt_num_rows($validar_login) > 0) {
     header("Location: ../client.php");
     exit;
 } else {
-    echo '
-    <script>
-        alert("Usuario no existe, por favor verifique los datos introducidos");
-        window.location = "../login.php";
-    </script>
-    ';
+    // Redirigir a la página de login con un parámetro en la URL
+    header("Location: ../login.php?error=1");
     exit;
 }
-
 mysqli_stmt_close($validar_login);
 
 }

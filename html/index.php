@@ -61,51 +61,62 @@
             </div>
             </div>
         </nav>
-      </header>
+    </header>
 
-
-
-    <!--
-    <header id="main-header">
-      
-      
-      <nav class="navbar navbar-expand-lg bg-body-tertiary custom-nav">
-
-        <div id="header">
-          <a href="index.html"><div style="margin-top: 10px; margin-left: 15px;"><img src="assets/img/LOGO-COLOR.png" width="80px" height="80px" alt="LOGOTIPO DE LA EMPRESA"></div></a>  
-          <div class="titulo">Clinica</div>
-          <div class="titulo2">Montalban</div>
-        </div>
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">INICIO</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="eindex.html">ESPECIALIDADES</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="qsindex.html">QUIÉNES SOMOS</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contacto.html">CONTACTO</a>
-              </li>
+    <header class="headeroculto">
+    <nav class="navbar bg-body-tertiary fixed-top">
+  <div class="container-fluid">
+            <a href="index.php"><div><img src="assets/img/LOGO-COLOR.png" width="55px" class="imagenlogo-pequeño" height="55px" alt="LOGOTIPO DE LA EMPRESA"></div></a> 
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">&nbsp;</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+        <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.php">INICIO</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="eindex.php">ESPECIALIDADES</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="qsindex.php">QUIÉNES SOMOS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contacto.php">CONTACTO</a>
+                </li>
             </ul>
-          </div>
-        </div>
-        <div class="flexiniciosesion">
-          <div class="rectangulo">
-            <a class="linksindecoracion" href="login.html"><div style="color: white; font-weight: bold;" class="entraryregistrarse">PEDIR CITA</div></a>
-          </div>
-        </div>
-        </nav>
-      </header>
-                -->
-                
+          </li>
+        </ul>
+        <div class="flexiniciosesion-pequeño">
+            <div class="rectangulo-pequeño">
+
+              <?php
+                  // Verificar si la sesión está iniciada
+                  session_start();
+                  if (isset($_SESSION['usuario'])) {
+                      // Si está iniciada, mostrar el botón con la función onclick
+                      echo '<a class="linksindecoracion" href="client.php"><div style="color: white; font-weight: bold;" class="entraryregistrarse">MI CUENTA</div></a>';
+                  } else {
+                      // Si no está iniciada, mostrar el enlace normal
+                      echo '<a class="linksindecoracion" href="login.php"><div style="color: white; font-weight: bold;" class="entraryregistrarse">PEDIR CITA</div></a>';
+                  }
+              ?>
+
+            </div>
+            </div>
+      </div>
+    </div>
+  </div>
+</nav>
+    </header>
+
+
+                  
       <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner" style="max-height: 400px;">
             <div class="carousel-item active">
@@ -132,9 +143,9 @@
     <div class="flex-pagina">
       <div class="flex1">
         <div class="texto1">
-          <p style="font-size: 40px; font-weight: bolder;">Quienes somos</p>
-          <p style="width: 600px; font-size: 30px;">El equipo de Clinica Montalban trabaja con gran profesionalidad para ofrecer y garantizar una asistencia de primera calidad.</p>
-          <a href="qsindex.php" style="border-radius: 10px; box-shadow: 0  2px 8px 5px rgba(0, 0, 0, 0.15);" type="button" class="btn btn-light">Saber más</a>
+          <p class="p1-1">Quienes somos</p>
+          <p class="p1-2">El equipo de Clinica Montalban trabaja con gran profesionalidad para ofrecer y garantizar una asistencia de primera calidad.</p>
+          <a href="qsindex.php" style="border-radius: 10px; box-shadow: 0  2px 8px 5px rgba(0, 0, 0, 0.15);" type="button" class="btn btn-light sm-01">Saber más</a>
         </div>
         <img class="img1" style="border-radius: 20px; box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15);" width="500px" src="assets/img/img1.jpg">
       </div>
@@ -144,11 +155,20 @@
         <div class="texto1">
           <p style="font-size: 40px; font-weight: bolder;">Especialistas</p>
           <p style="width: 600px; font-size: 30px;">El equipo de Clinica Montalban consta con los mejores profesionales para cada una de las especialidades en la sanidad.</p>
-          <a href="eindex.php" style="border-radius: 10px; box-shadow: 0  2px 8px 5px rgba(0, 0, 0, 0.15);" type="button" class="btn btn-light">Saber más</a>
+          <a href="eindex.php" style="border-radius: 10px; box-shadow: 0  2px 8px 5px rgba(0, 0, 0, 0.15);" type="button" class="btn btn-light ">Saber más</a>
         </div>
       </div>
-    </div>
 
+      <div class="flex1 flexoculto">
+        <div class="texto1">
+          <p class="p1-1">Especialistas</p>
+          <p class="p1-2">El equipo de Clinica Montalban consta con los mejores profesionales para cada una de las especialidades en la sanidad.</p>
+          <a href="eindex.php" style="border-radius: 10px; box-shadow: 0  2px 8px 5px rgba(0, 0, 0, 0.15);" type="button" class="btn btn-light sm-01">Saber más</a>
+        </div>
+        <img class="img2" style="border-radius: 20px; box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15);" width="500px" src="assets/img/especialistas.jpg">
+      </div>
+    </div>
+                
     <div class="flexcartas">
       <div class="card" style="width: 22rem;">
         <img src="assets/img/icono_curar-1.png" width="50px" alt="">

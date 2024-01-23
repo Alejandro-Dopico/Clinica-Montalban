@@ -61,6 +61,58 @@
             </div>
             </div>
         </nav>
+                </header>
+        <header class="headeroculto">
+    <nav class="navbar bg-body-tertiary fixed-top">
+  <div class="container-fluid">
+            <a href="index.php"><div><img src="assets/img/LOGO-COLOR.png" width="55px" class="imagenlogo-pequeño" height="55px" alt="LOGOTIPO DE LA EMPRESA"></div></a> 
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">&nbsp;</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+        <li class="nav-item">
+        <li class="nav-item">
+                  <a class="nav-link" href="index.php">INICIO</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="eindex.php">ESPECIALIDADES</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="qsindex.php">QUIÉNES SOMOS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contacto.php">CONTACTO</a>
+                </li> 
+            </ul>
+          </li>
+        </ul>
+        <div class="flexiniciosesion-pequeño">
+            <div class="rectangulo-pequeño">
+
+              <?php
+                  // Verificar si la sesión está iniciada
+                  session_start();
+                  if (isset($_SESSION['usuario'])) {
+                      // Si está iniciada, mostrar el botón con la función onclick
+                      echo '<a class="linksindecoracion" href="client.php"><div style="color: white; font-weight: bold;" class="entraryregistrarse">MI CUENTA</div></a>';
+                  } else {
+                      // Si no está iniciada, mostrar el enlace normal
+                      echo '<a class="linksindecoracion" href="login.php"><div style="color: white; font-weight: bold;" class="entraryregistrarse">PEDIR CITA</div></a>';
+                  }
+              ?>
+
+            </div>
+            </div>
+      </div>
+    </div>
+  </div>
+</nav>
       </header>
       <br><br><br><br><br><br>
       
@@ -76,7 +128,7 @@
           <p>Dentro de este grupo de médicos accionistas, también se encontraba el Dr. Echevarne. Veinte y cinco años más tarde, en 2016, Grupo Echevarne tomó la iniciativa de convertirse en propietario único del accionariado de la sociedad, manteniendo el excelente cuadro médico.</p>
         </div>
         <div>
-          <img src="assets/img/clinica-antigua.webp" alt="Fotografia antigua de las primeras instalaciones" width="450px" style="padding-left: 70px; padding-top: 50px;">
+          <img class="imagen1" src="assets/img/clinica-antigua.webp" alt="Fotografia antigua de las primeras instalaciones" width="450px" >
         </div>
       </div>
 

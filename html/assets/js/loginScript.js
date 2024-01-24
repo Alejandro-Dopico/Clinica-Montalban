@@ -1,9 +1,26 @@
+
+/* Esta funcion se asegura que compruebe si se ha equivocado el cliente en introducir los datos. */
+document.addEventListener('DOMContentLoaded', function () {
+    // Verificar si hay un parámetro de error en la URL
+
+    var urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('error') && urlParams.get('error') === '1') {
+        // Ejecutar la función actualizarMensajeError()
+        actualizarMensajeError();
+    }
+});
+
+// Asegúrate de que esta función esté definida antes de su uso
+function actualizarMensajeError() {
+
+    document.getElementById("error-cuenta").innerHTML = '<br><p style="color: red; font-weight: bold;">Usuario no existe.</p><p style="color: red; font-weight: bold;">Por favor verifique los datos introducidos.</p>';
+}
+
 /* Aquí creamos las variables y le indicamos con que ID esta trabajando,
  tambien con la clase que es el "query". */
 const btnSignIn = document.getElementById("sign-in"),
     btnSignUp = document.getElementById("sign-up"),
     btnRecovery = document.getElementById("recovery-link"),
-    btnBackRecovery = document.getElementById("back"),
     formRegister = document.querySelector(".register"),
     formLogin = document.querySelector(".login"),
     formRecovery = document.querySelector(".recovery"),
@@ -25,15 +42,6 @@ btnRecovery.addEventListener("click", e => {
     });
 });
 
-btnBackRecovery.addEventListener("click", e => {
-    fadeOut(formLogin, function () {
-        formRecovery.classList.add("hide-recovery");
-        formLogin.classList.remove("hide");
-        formRecovery.style.visibility = "hidden";
-        formLogin.style.visibility = "visible";
-        fadeIn(formLogin);
-    });
-});
 
 btnSignIn.addEventListener("click", e => {
     fadeOut(formLogin, function () {
@@ -168,19 +176,4 @@ dateInput.addEventListener("change", function () {
         dateInput.setCustomValidity("");
     }
 });
-
-document.addEventListener('DOMContentLoaded', function () {
-    // Verificar si hay un parámetro de error en la URL
-    var urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.has('error') && urlParams.get('error') === '1') {
-        // Ejecutar la función actualizarMensajeError()
-        actualizarMensajeError();
-    }
-});
-
-// Asegúrate de que esta función esté definida antes de su uso
-function actualizarMensajeError() {
-
-    document.getElementById("error-cuenta").innerHTML = '<br><p style="color: red; font-weight: bold;">Usuario no existe.</p><p style="color: red; font-weight: bold;">Por favor verifique los datos introducidos.</p>';
-}
 

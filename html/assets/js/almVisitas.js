@@ -1,9 +1,9 @@
 let boton2 = document.getElementById("generarJSON");
-boton2.addEventListener("click", almacenarJSON);
+boton2.addEventListener("click", almacenarJSON());
 
 function almacenarJSON(){
     $.ajax({
-         url:'../php/getVisitas2.php',
+         url:'../php/getJson.php',
          method:'GET',
          success: function (data){
          },

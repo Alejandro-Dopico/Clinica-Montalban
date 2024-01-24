@@ -42,8 +42,15 @@ function validarContraseñas() {
         // Limpiar los campos de contraseña si no coinciden
         inputContraseña1.value = "";
         inputContraseña2.value = "";
+
+
+
+
     } else {
         mensajeError.style.display = "none";
         document.getElementById("resetForm").submit();
     }
 }
+
+
+

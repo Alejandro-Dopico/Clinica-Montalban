@@ -5,13 +5,13 @@ session_start();
 // Check if the form fields are set
 if (
     isset($_POST['nombre']) &&
-    isset($_POST['apellidos']) &&
+    isset($_POST['apellido']) &&
     isset($_POST['telefono']) &&
     isset($_POST['direccion'])
 ) {
     // Retrieve the values from the form
     $nombre = $_POST['nombre'];
-    $apellidos = $_POST['apellidos'];
+    $apellidos = $_POST['apellido'];
     $telefono = $_POST['telefono'];
     $direccion = $_POST['direccion'];
 

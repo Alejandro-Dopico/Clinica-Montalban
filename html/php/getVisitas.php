@@ -30,7 +30,7 @@ if ($result && mysqli_num_rows($result) > 0) {
                 </div>
                 <p class="mb-1" style="word-wrap: break-word;">' . $row['descripcion'] . '</p>
                 <small><strong>Cliente: </strong>' . $row['nombreCliente'] . '</small>
-                <button style="margin-left: 270px; margin-bottom: 20px; padding: 8px" class="btn btn-danger btn-sm" onclick="borrarCita(' . $idCita . ')">Borrar</button>
+<button style="margin-left: auto; margin-bottom: 20px; padding: 8px; display: block;" class="btn btn-danger btn-sm" onclick="borrarCita(' . $idCita . ')">Anular</button>
                 <div id="eliminar"></div>
             </div>';
     }

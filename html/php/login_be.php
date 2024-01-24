@@ -19,15 +19,8 @@ if(session_start()){
     mysqli_stmt_execute($validar_login);
     mysqli_stmt_store_result($validar_login);
 
-    $consulta_nombre = mysqli_prepare($conexion, "SELECT nombre FROM persona WHERE DNI=?");
-    mysqli_stmt_bind_param($consulta_nombre, "s", $DNI);
-    mysqli_stmt_execute($consulta_nombre);
-    mysqli_stmt_bind_result($consulta_nombre, $nombre_usuario);
-    mysqli_stmt_fetch($consulta_nombre);
-
 if (mysqli_stmt_num_rows($validar_login) > 0) {
     $_SESSION['usuario'] = $DNI;
-    $_SESSION['nombre'] = $nombre_usuario;
 
     header("Location: ../client.php");
     exit;

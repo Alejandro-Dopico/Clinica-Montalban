@@ -510,5 +510,7 @@ input[type="submit"]:hover {
         align-items: center;
         justify-content: center;
     }
-    
+    .navbar{
+    box-shadow: 0 2px 8px rgb(0, 128, 255);
+    }
 }

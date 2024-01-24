@@ -387,4 +387,10 @@ footer{
         background: linear-gradient(165deg, white, white, rgb(190, 255, 255),#2cd5ff);
         z-index: -1;
     }
+    .navbar{
+    box-shadow: 0 2px 8px rgb(0, 128, 255);
+    }
+    .vacio{
+        display: none;
+    }
 }

@@ -282,6 +282,26 @@ input::-webkit-inner-spin-button {
     box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
 }
 
+.botonReset{
+    background-color: rgb(151, 212, 154);
+    outline: none;
+    border: rgb(151, 212, 154);
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botonReset:hover {
+    background-color: rgb(218, 238, 255);
+    border: solid 2px rgb(218, 238, 255);
+    color: rgb(62, 74, 134);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+}
+
+
 
 /* Firefox */
 input[type=number] {

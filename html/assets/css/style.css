@@ -309,7 +309,8 @@ footer{
 .p1-2{
     width: 600px; font-size: 30px;
 }
-
+.vacio{display: none;}
+.tituloindex{display: none;}
 @media (min-width: 1302px) and (max-width: 1481px) {
     .img1{
         margin: 25px;
@@ -340,6 +341,9 @@ footer{
         height: 2800px;
         background: linear-gradient(165deg, white, white, rgb(190, 255, 255),#2cd5ff);
         z-index: -1;
+    }
+    .navbar{
+    box-shadow: 0 2px 8px rgb(0, 128, 255);
     }
 }
 
@@ -378,6 +382,9 @@ footer{
         background: linear-gradient(165deg, white, white, rgb(190, 255, 255),#2cd5ff);
         z-index: -1;
     }
+    .navbar{
+    box-shadow: 0 2px 8px rgb(0, 128, 255);
+    }
 }
 @media (min-width: 1151px) and (max-width: 1168px) {
     .img1{
@@ -413,6 +420,9 @@ footer{
         height: 3400px;
         background: linear-gradient(165deg, white, white, rgb(190, 255, 255),#2cd5ff);
         z-index: -1;
+    }
+    .navbar{
+    box-shadow: 0 2px 8px rgb(0, 128, 255);
     }
 }
 
@@ -451,6 +461,9 @@ footer{
         background: linear-gradient(165deg, white, white, rgb(190, 255, 255),#2cd5ff);
         z-index: -1;
     }
+    .navbar{
+    box-shadow: 0 2px 8px rgb(0, 128, 255);
+    }
 }
 @media (min-width: 992px) and (max-width: 1044px) {
     .img1{
@@ -486,6 +499,9 @@ footer{
         height: 3400px;
         background: linear-gradient(165deg, white, white, rgb(190, 255, 255),#2cd5ff);
         z-index: -1;
+    }
+    .navbar{
+    box-shadow: 0 2px 8px rgb(0, 128, 255);
     }
 }
 @media (min-width: 933px) and (max-width: 991px) {
@@ -584,6 +600,9 @@ footer{
     .navbar-toggler{
         position: absolute;
     }
+    .navbar{
+    box-shadow: 0 2px 8px rgb(0, 128, 255);
+    }
 }
 @media (min-width: 777px) and (max-width: 932px) {
     .main-header{
@@ -680,6 +699,9 @@ footer{
     }
     .navbar-toggler{
         position: absolute;
+    }
+    .navbar{
+    box-shadow: 0 2px 8px rgb(0, 128, 255);
     }
 }
 @media (min-width: 689px) and (max-width: 776px) {
@@ -778,6 +800,9 @@ footer{
     .navbar-toggler{
         position: absolute;
     }
+    .navbar{
+    box-shadow: 0 2px 8px rgb(0, 128, 255);
+    }
 }
 @media (min-width: 561px) and (max-width: 688px) {
     .main-header{
@@ -875,6 +900,9 @@ footer{
     .navbar-toggler{
         position: absolute;
     }
+    .navbar{
+    box-shadow: 0 2px 8px rgb(0, 128, 255);
+    }
 }
 @media (min-width: 0px) and (max-width: 560px) {
     .main-header{
@@ -882,6 +910,9 @@ footer{
     }
     .headeroculto{
         display:inline;
+    }
+    .navbar{
+    box-shadow: 0 2px 8px rgb(0, 128, 255);
     }
     .img1{
         margin-left: -80px;
@@ -996,5 +1027,23 @@ footer{
     }
     .flexfooter3{
         margin-left: -10px;
+    }
+    .carousel-inner{
+        max-height: 500px;
+    }
+    .carousel-inner {
+        display: none;
+    }
+    .vacio{
+        display:inline;
+    }
+    .tituloindex{
+        margin-top: 20px;
+        margin-bottom: -30px;
+        display: flex;
+        justify-content: center;
+        font-family: 'Averta-Regular';
+        font-weight: bold;
+        font-size: 20px;
     }
 }

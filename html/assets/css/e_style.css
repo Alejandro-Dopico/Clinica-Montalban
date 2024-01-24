@@ -33,6 +33,15 @@
     border-radius: 10px;
     margin-bottom: 15px;
 }
+.tituloe{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Averta-Regular';
+    font-weight: bold;
+    font-size: 50px;
+}
 @media (min-width: 0px) and (max-width: 998px) {
     .main-header{
         display: none;
@@ -134,5 +143,11 @@
     }
     .imagen{
         width: 250px;
+    }
+    .navbar{
+    box-shadow: 0 2px 8px rgb(0, 128, 255);
+    }
+    .tituloe{
+        font-size: 30px;
     }
 }

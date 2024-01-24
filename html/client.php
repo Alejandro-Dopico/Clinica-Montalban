@@ -7,7 +7,7 @@
         header("Location: ../login.php");
         exit;
     }
-
+include 'php/getDatosCuenta.php';
 ?>
 <head>
 
@@ -41,13 +41,13 @@
         </div>
         <div class="btn-group">
             <button class="btn btn-light btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Bienvenido, <?php echo $_SESSION['nombre']; ?>!
+                Bienvenido, <?php echo $nombre ?>!
             </button>
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="index.php">Inicio</a></li>
                 <li><a class="dropdown-item" href="cuenta.php">Modificar Cuenta</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="php/cerrar_sesion.php">Cerrar Sesión</a></li>
+                <li><a class="dropdown-item" href="php/cerrarSesion.php">Cerrar Sesión</a></li>
             </ul>
         </div>
         
@@ -127,7 +127,7 @@
 
             <!-- Carta de Cita -->
             <div class="card" style="width: 18rem; max-width: 100%;">
-                <img src="assets/img/clinica-cita.jpg" class="card-img-top" alt="Cita - Medico de cabecera">
+                <img src="assets/img/calendario-clinica.jpg" class="card-img-top" alt="Cita - Medico de cabecera">
                 <div class="card-body">
                     <h5 class="card-title">Medico de cabecera</h5>
                     <p class="card-text">Calendario en tiempo real. Puedes solicitar varias citas al día!</p>
@@ -170,7 +170,7 @@
 
             <!-- Carta de Visita (vertical) -->
             <div class="card" style="width: 18rem; max-width: 100%;">
-                <img class="card-img-top" src="assets/img/clinica-cita.jpg" alt="Visitas Programadas">
+                <img class="card-img-top" src="assets/img/visitas-programadas.jpg" alt="Visitas Programadas">
                 <div class="card-body">
                     <h5 class="card-title">Visitas Programadas</h5>
                     <p class="card-text">Comprueba tus citas pendientes i/o elimina la cita.</p>

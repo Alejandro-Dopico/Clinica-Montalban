@@ -114,7 +114,7 @@
   </div>
 </nav>
       </header>
-      <br><br><br><br><br><br>
+      <br class="vacio"><br class="vacio"><br><br><br><br>
       
       <p class="tituloqs">¿QUIÉNES SOMOS?</p>
       <img src="assets/img/quienes-somos-principal.jpg" alt="Fotografia antiguas sobre la empresa" class="imagenqs">

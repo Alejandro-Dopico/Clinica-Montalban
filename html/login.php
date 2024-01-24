@@ -73,6 +73,7 @@
                         <input type="text" placeholder="Nombre" name="nombre" maxlength="50" required>
                         <input type="text" placeholder="Apellidos" name="apellidos" maxlength="50" required>
                     </label>
+                    <label>
                         <i class='bx bx-sidebar'></i>
                         <input type="text" placeholder="NIF/DNI" maxlength="9" name="dni" required>
                         <i class='bx bx-calendar'></i>
@@ -121,15 +122,16 @@
             <div class="form-information-childs">
                 <h2>Recuperar contraseña</h2>
                 <p>Introduce tu correo electronico</p>
-                <form class="form">
+                <form action="php/recuperacion_be.php" method="POST" class="form">
                     <label class="recovery-text">
                         <i class='bx bx-envelope' ></i>
                         <input type="text" name="correo_recovery" placeholder="Correo Electronico" required>
+                        <input type="hidden" name="formulario" value="recuperacion">
                     </label>
                     <br>
                     <input type="submit" value="Enviar">
                     <br><br>
-                    <button class="back-recovery" id="back">Volver al inicio</button>
+                    <a href="">Volver</a>
                 </form>
             </div>
         </div>

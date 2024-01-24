@@ -3,9 +3,16 @@
 
 <?php
 session_start();
+include 'php/conexion_be.php';
 include 'php/getDatosCuenta.php';
-?>
 
+// Verificar si hay una sesión de usuario iniciada
+if (!isset($_SESSION['usuario'])) {
+    header("Location: ../login.php");
+    exit;
+}
+
+?>
 <head>
 
     <meta charset="UTF-8">
@@ -36,7 +43,7 @@ include 'php/getDatosCuenta.php';
         </div>
         <div class="btn-group">
             <button class="btn btn-light btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Bienvenido, <?php echo $_SESSION['nombre']; ?>!
+                Bienvenido, <?php echo $nombre ?>!
             </button>
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="client.php">Servicios</a></li>
@@ -53,19 +60,20 @@ include 'php/getDatosCuenta.php';
         <div class="form-row">
             <div class="form-group col-md-6 nombre">
                 <label for="inputName4">Nombre</label>
-                <input type="text" class="form-control" id="inputName4" placeholder="Nombre" value="<?php echo $nombre; ?>">
+                <input type="text" class="form-control" name="nombre" id="inputName4" placeholder="Nombre" value="<?php echo isset($nombre) ? $nombre : ''; ?>">
             </div>
             <div class="form-group col-md-6 campo">
                 <label for="inputSurname4">Apellidos</label>
-                <input type="text" class="form-control" id="inputSurname4" placeholder="Apellidos" value="<?php echo $apellido; ?>">
+                <input type="text" class="form-control" name="apellido" id="inputSurname4" placeholder="Apellido" value="<?php echo isset($apellido) ? $apellido : ''; ?>">
             </div>
             <div class="form-group campo">
                 <label for="inputAddress">Dirección</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="Dirección" value="<?php echo $direccion; ?>">
+                <input type="text" class="form-control" name="direccion" id="inputAddress" placeholder="Dirección" value="<?php echo isset($direccion) ? $direccion : ''; ?>">
+                										
             </div>
             <div class="form-group col-md-6 campo">
                 <label for="inputPhone4">Telefono</label>
-                <input type="tel" class="form-control" id="inputPhone4" placeholder="Telefono" value="<?php echo $telefono; ?>">
+                <input type="tel" class="form-control" name="telefono" id="inputPhone4" placeholder="Telefono" value="<?php echo isset($telefono) ? $telefono : ''; ?>">
             </div>
         </div>
         </div>

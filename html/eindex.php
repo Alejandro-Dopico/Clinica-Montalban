@@ -115,7 +115,7 @@
 </nav>
       </header>
 <br><br><br><br><br>
-
+  <p class="tituloe">ESPECIALIDADES</p>
     <div class="especialidades">
       <section class="tarjeta" id="ginecologia">
         <h2>Ginecología</h2>

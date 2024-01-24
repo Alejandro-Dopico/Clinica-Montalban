@@ -1,3 +1,8 @@
+<?php
+
+include "php/getToken.php"
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -27,7 +32,7 @@
             <div class="form-information-childs">
                 <h2>Restablecer contraseña</h2>
                 <p>Introduce tu nueva contraseña</p>
-                <form action="php/reset_contra.php" method="POST" class="form" id="resetForm">
+                <form action="php/updatePass.php" method="POST" class="form" id="resetForm">
                     <label class="passwordeye">
                         <i class='bx bx-lock' ></i>
                         <input type="password" placeholder="Nueva contraseña" name="contrasena" maxlength="50" required id="password-field-reset">
@@ -38,6 +43,8 @@
                     <label class="passwordeye">
                         <i class='bx bx-lock' ></i>
                         <input type="password" placeholder="Vuelve a introducir" name="contrasena" maxlength="50" required id="password-field-reset2">
+                        <input type="hidden" name="token" value="<?php echo $token?>">
+
                         <div class="eye" id="toggle-password-reset2">
                             <i class='bx bxs-hide'></i>
                         </div>

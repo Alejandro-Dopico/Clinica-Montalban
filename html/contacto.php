@@ -16,7 +16,7 @@
 
       <nav class="navbar navbar-expand-lg bg-body-tertiary custom-nav" style="background-color: white !important;">
 
-          <a href="index.html">
+          <a href="index.php">
             <div><img src="assets/img/LOGO-COLOR.png" width="80px" class="imagenlogo" height="80px" alt="LOGOTIPO DE LA EMPRESA"></div>
           </a> 
           <div class="titulo">Clinica</div>
@@ -144,11 +144,11 @@
           <h2 class="nombrecontacto">Formulario Contacto</h2>
           <form action="php/contacto_be.php" method="POST" class="form">
             <div class="form-floating mb-3">
-              <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+              <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="correo" required>
               <label for="floatingInput">Correo Electronico</label>
             </div>
             <div class="form-floating" style="margin-bottom: 40px;">
-              <textarea type="text" class="form-control" style="resize: none; height: 20rem;" id="floatingInput" placeholder="Motivo de contacto" required></textarea>
+              <textarea type="text" class="form-control" style="resize: none; height: 20rem;" id="floatingInput" placeholder="Motivo de contacto" name="duda" required></textarea>
               <label for="floatingInput">Motivo</label>
             </div>
             <br>
@@ -156,7 +156,6 @@
           </form>
         </div>
       </div>
-
 
 
       <footer>

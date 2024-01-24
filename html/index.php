@@ -118,7 +118,7 @@
 
                   
       <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner" style="max-height: 400px;">
+        <div class="carousel-inner" style="max-height: 650px;">
             <div class="carousel-item active">
                 <img src="assets/img/carousel1.jpg" class="d-block w-100 img-fluid" alt="...">
             </div>
@@ -139,7 +139,11 @@
         </button>
       
     </div>
-
+    <br class="vacio">
+    <br class="vacio">
+    <br class="vacio">
+    <br class="vacio">
+    <p class="tituloindex">INICIO</p>
     <div class="flex-pagina">
       <div class="flex1">
         <div class="texto1">
@@ -237,9 +241,7 @@
       <div class="Copyright">© Copyright 2023. Clínica Montalban S.A.</div>
     </footer>
 
-    
-
     <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/login_script.js"></script>
+
 </body>
 </html>
